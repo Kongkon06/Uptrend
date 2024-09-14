@@ -4,14 +4,16 @@ export default function (){
     return<div >
     <Appbar />
     <div className="h-screen flex font-dm-sans ">
-        <div className="h-full w-56 font-dm-sans pl-5 font-semibold flex flex-col text-xl bg-blue-700">
-            <div>
+        <div className="h-screen w-56 font-dm-sans font-semibold flex flex-col text-xl bg-slate-300">
+            <div className="pl-3 h-16 flex items-center border-slate-900 border-b-2 pl-5">
                 Filter
             </div>
-            <div>
+            <div className="pl-3 h-16 flex items-center border-slate-900 border-b-2 pl-5">
                 Casual
             </div>
-            <div>Summer wear</div>
+            <div className="pl-3 h-16 flex items-center border-slate-900 border-b-2 pl-5">
+                Summer wear
+            </div>
         </div>
         <div className="w-full p-3 grid grid-cols-5 gap-2">
             <div className="col-span-3">
@@ -43,17 +45,17 @@ export default function (){
                 <div className="mt-7 text-2xl ">
                     <div>Select Size</div>
                     <div className="mt-2 flex">
-                        <div role="button" className="px-4 border-2 border-black mr-2 bg-slate-200 hover:border-blue-700">S</div>
-                        <div role="button" className="px-4 border-2 mr-2 bg-slate-200">M</div>
-                        <div role="button" className=" px-4 border-2 mr-2 bg-slate-200">L</div>
-                        <div role="button" className="px-4 border-2 mr-2 bg-slate-200">XL</div></div>
+                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700 onfocus:border-slate-700">S</div>
+                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700">M</div>
+                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700">L</div>
+                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700">XL</div></div>
                 </div>
                 <div className="mt-7 text-2xl ">
                     <div>Quantity</div>
-                    <div className="mt-2 flex flex-between items-center border-x-2">
-                        <div className=" h-6 w-6 items-center border-2">+</div>
+                    <div className="mt-2 w-20 flex justify-between items-center border-black border-y-2">
+                        <div className=" h-6 w-6 flex items-center ">+</div>
                         <div>1</div>
-                        <div className=" h-6 w-6 items-center border-2">-</div>
+                        <div className=" h-6 w-6 pl-2 flex items-center ">-</div>
                     </div>
                 </div>
                 <div className="mt-7 text-2xl ">
@@ -68,8 +70,13 @@ export default function (){
                         </span>
                     </button>
                 </div>
-                <div className="mt-10 w-auto p-2text-2xl flex flex-col">
-                    <div className="border-b-2 border-slate-300 py-3 mr-2 ">Description</div>
+                <div className="mt-10 w-auto p-2 text-2xl flex flex-col">
+                    <div className="flex flex-between border-b-2 border-slate-300 py-3 mr-2"><div className=" ">Description</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="size-6">
+                    <path d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+
+                    </div>
                     <div className="py-3 border-b-2 border-slate-300 mr-2 ">Subscription</div>
                     <div className=" py-3 border-b-2 border-slate-300 mr-2 ">Shoping and Returns</div>
                     <div className="py-3 border-b-2 border-slate-300 mr-2 ">Details</div></div>
