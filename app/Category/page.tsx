@@ -1,7 +1,7 @@
 import { Card } from "@/components/Card";
 import { Tagline } from "@/components/Tagline";
 
-export function Category(){
+export default function(){
     return <div>
         <Tagline/>
         <div className="flex">
