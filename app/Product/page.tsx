@@ -43,10 +43,10 @@ export default function (){
                 <div className="mt-7 text-2xl ">
                     <div>Select Size</div>
                     <div className="mt-2 flex">
-                        <div className="px-4 border-4 mr-2 bg-slate-200">S</div>
-                        <div className="px-4 border-4 mr-2 bg-slate-200">M</div>
-                        <div className=" px-4 border-4 mr-2 bg-slate-200">L</div>
-                        <div className="px-4 border-4mr-2 bg-slate-200">XL</div></div>
+                        <div role="button" className="px-4 border-2 border-black mr-2 bg-slate-200 hover:border-blue-700">S</div>
+                        <div role="button" className="px-4 border-2 mr-2 bg-slate-200">M</div>
+                        <div role="button" className=" px-4 border-2 mr-2 bg-slate-200">L</div>
+                        <div role="button" className="px-4 border-2 mr-2 bg-slate-200">XL</div></div>
                 </div>
                 <div className="mt-7 text-2xl ">
                     <div>Quantity</div>

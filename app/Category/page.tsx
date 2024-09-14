@@ -1,4 +1,4 @@
-import { Card } from "@/components/Card";
+import { CategoryCard } from "@/components/CategoryCard";
 import { Tagline } from "@/components/Tagline";
 
 export default function(){
@@ -7,20 +7,15 @@ export default function(){
         <div className="flex">
             <div className="h-screen w-44 bg-slate-700"></div>
             <div className="h-full w-full">
-                <div className="p-3 grid grid-cols-4 grid-rows-2 gap-2">
-                    <div className="h-64">
-                            <Card/>
-                    </div>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                <div className="p-3 w-full grid grid-cols-3 gap-2">
+                    <div>
+                        <CategoryCard/>
+                        </div>
+                        <CategoryCard/>
+                        <CategoryCard/>
+                        <CategoryCard/>
+                        <CategoryCard/>
+                        <CategoryCard/>
                 </div>
             </div>
         </div>
