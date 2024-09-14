@@ -1,8 +1,13 @@
+import { ProductProps } from "@/app/Category/page";
 import { Details } from "./Details";
+import React from "react";
 
-export function CategoryCard(){
+
+const CategoryCard = ({product}: {product: ProductProps}) => {
+
     return <div className="h-full rounded-lg w-auto flex shadow-xl shadow-slate-300">
-            <img  src="https://i.pinimg.com/originals/69/20/f2/6920f212a7d4868e7263baacfaaa5649.jpg" className="w-1/2 rounded-l-lg aspect-16/9"></img>
-            <Details/>
+            <img  src={product.image} className="w-1/2 rounded-l-lg aspect-16/9"></img>
+            <Details product={product}/>
     </div>
-}
+};
+export default CategoryCard;

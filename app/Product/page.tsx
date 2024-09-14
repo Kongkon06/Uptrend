@@ -1,4 +1,5 @@
 import { Appbar } from "@/components/Appbar";
+import { Suggestion } from "@/components/Similiar";
 
 export default function (){
     return<div >
@@ -15,7 +16,7 @@ export default function (){
                 Summer wear
             </div>
         </div>
-        <div className="w-full p-3 grid grid-cols-5 gap-2">
+        <div><div className="w-full p-3 grid grid-cols-5 gap-2">
             <div className="col-span-3">
                 <div className=" flex justify-center">
                     <img
@@ -71,17 +72,29 @@ export default function (){
                     </button>
                 </div>
                 <div className="mt-10 w-auto p-2 text-2xl flex flex-col">
-                    <div className="flex flex-between border-b-2 border-slate-300 py-3 mr-2"><div className=" ">Description</div>
+                    <div className="flex justify-between border-b-2 border-slate-300 py-3 mr-2"><div className=" ">Description</div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="size-6">
                     <path d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
 
                     </div>
-                    <div className="py-3 border-b-2 border-slate-300 mr-2 ">Subscription</div>
-                    <div className=" py-3 border-b-2 border-slate-300 mr-2 ">Shoping and Returns</div>
-                    <div className="py-3 border-b-2 border-slate-300 mr-2 ">Details</div></div>
+                    <div className="flex justify-between border-b-2 border-slate-300 py-3 mr-2"><div className=" ">Shopping and returns</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="size-6">
+                    <path d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+
+                    </div>
+                    <div className="flex justify-between border-b-2 border-slate-300 py-3 mr-2"><div className=" ">Details</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="size-6">
+                    <path d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                    </svg>
+
+                    </div>
+                    </div>
             </div>
         </div>
+        <Suggestion/></div>
+        
     </div>
 </div>
 }

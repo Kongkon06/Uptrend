@@ -1,4 +1,5 @@
 "use client"
+import Link from "next/link";
 import { useState } from "react";
 
 const DrawerNavigation = () => {
@@ -19,7 +20,6 @@ const DrawerNavigation = () => {
 </svg>
 
       </button>
-
       <div
         className={`fixed top-0 left-0 z-40 w-64 h-screen p-4 overflow-y-auto transition-transform ${
           isOpen ? "translate-x-0" : "-translate-x-full"
@@ -54,7 +54,8 @@ const DrawerNavigation = () => {
         </button>
 
         <div className="py-4 overflow-y-auto ">
-          <div role="button"  className="text-white text-lg p-3 border-x border-indigo-700">Home</div>
+        <Link href={'/Category'}>
+        <div role="button"  className="text-white text-lg p-3 border-x border-indigo-700">Home</div></Link>
           <div role="button" className="text-white text-lg p-3 border-x border-indigo-700">Completed Task</div>
           <div role="button" className="text-white text-lg p-3 border-x border-indigo-700">Calendar</div>
         </div>
