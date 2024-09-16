@@ -1,6 +1,6 @@
 "use client";
 
-import { CategoryCard } from "@/components/CategoryCard";
+import CategoryCard from "@/components/CategoryCard";
 import { Tagline } from "@/components/Tagline";
 import { useState, useEffect } from "react";
 import { Slider } from "@/components/ui/slider";
@@ -29,39 +29,20 @@ export type ProductProps = {
 
 export default function Category() {
 
-  const [products, setProducts] = useState<ProductProps[] | any>(initialProducts);
+  const [products, setProducts] = useState<ProductProps[]>(initialProducts); // Explicit type
   const [categories, setCategories] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [sortBy, setSortBy] = useState<string>("name");
 
-  // Handle category change
-  const handleCategoryChange = (category: string) => {
-    setCategories((prevCategories) =>
-      prevCategories.includes(category)
-        ? prevCategories.filter((c) => c !== category)
-        : [...prevCategories, category]
-    );
-  };
-
-  // Handle price range change
-  const handlePriceChange = (value: [number, number]) => {
-    setPriceRange([value[0], value[1]]);
-  };
-
-  // Handle sort change
-  const handleSortChange = (value: string) => {
-    setSortBy(value);
-  };
-
   useEffect(() => {
-    // Filter and sort products based on selected categories, price range, and sorting criteria
-    const filteredProducts = initialProducts.filter(
-      (product) =>
-        (categories.length === 0 || categories.includes(product.category)) &&
-        product.price >= priceRange[0] &&
-        product.price <= priceRange[1]
+    // Filter products based on category and price range
+    const filteredProducts = initialProducts.filter((product: ProductProps) => 
+      (categories.length === 0 || categories.includes(product.category)) &&
+      product.price >= priceRange[0] &&
+      product.price <= priceRange[1]
     );
 
+    // Sort the filtered products
     filteredProducts.sort((a, b) => {
       if (sortBy === "price-asc") return a.price - b.price;
       if (sortBy === "price-desc") return b.price - a.price;
@@ -71,8 +52,24 @@ export default function Category() {
     setProducts(filteredProducts);
   }, [categories, priceRange, sortBy]);
 
+  const handleCategoryChange = (category: string) => {
+    setCategories((prevCategories) =>
+      prevCategories.includes(category)
+        ? prevCategories.filter((c) => c !== category)
+        : [...prevCategories, category]
+    );
+  };
+
+  const handlePriceChange = (value: [number, number]) => {
+    setPriceRange([value[0], value[1]]);
+  };
+
+  const handleSortChange = (value: string) => {
+    setSortBy(value);
+  };
+
   return (
-    <div>
+    <div className="font-dm-sans">
       <Appbar />
       <Tagline />
       <div className="flex">

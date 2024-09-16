@@ -1,18 +1,74 @@
-import { useRouter } from "next/navigation";
+'use client';
+import { User } from "lucide-react";
 import DrawerNavigation from "./Sidebar";
-import Link from "next/link";
 
-export function Appbar(){
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { useRouter } from "next/navigation";
 
-    return <div className='h-28 flex justify-between font-dm-sans bg-slate-900'>
-        <Link href={"/"}><div className="ml-4 h-full text-5xl text-white font-semibold flex items-center">
-            Hoodie
-        </div></Link>
-        <div className=" w-2/6 flex justify-between items-center text-3xl text-white">
-            <div role="button" >Men</div>
-            <div role="button" >Women</div>
-            <div role="button" >Trending</div>
-            <DrawerNavigation/>
-        </div>
+export function Appbar() {
+
+  const router = useRouter();
+
+  return (
+    <div className="h-20 flex justify-between font-dm-sans bg-slate-700 px-8">
+      <div className="gap-4 h-full text-5xl text-white font-semibold flex items-center">
+        Hoodie
+      </div>
+      <div
+        className={
+          "flex gap-5 items-center sm:text-xl text-white max-sm:hidden max-[320px]:text-xl"
+        }
+      >
+        <button className="relative inline-block font-medium group py-1.5 px-2.5">
+          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+          <span className="relative text-slate-600 ">Men</span>
+        </button>
+        <button className="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-white border border-slate-600 group-hover:bg-indigo-50"></span>
+          <span className="relative text-slate-600 ">Women</span>
+        </button>
+        <button className="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+          <span className="relative text-slate-600 ">Trending</span>
+        </button>
+        <button onClick={()=>router.push('/Category')} className="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
+          <span className="relative text-slate-600 ">All Products</span>
+        </button>
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <button className="relative inline-block font-medium group py-1.5 px-2.5 bg-slate-600 rounded-full hover:bg-white hover:text-slate-600 transform duration-400">
+              <User />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent className="mr-10 mt-3">
+            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Profile</DropdownMenuItem>
+            <DropdownMenuItem>Address</DropdownMenuItem>
+            <DropdownMenuItem>Others</DropdownMenuItem>
+            <DropdownMenuItem>
+              <button >
+                Log out
+              </button>
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+      <div className="sm:hidden flex items-center">
+        <DrawerNavigation />
+      </div>
     </div>
+  );
 }
