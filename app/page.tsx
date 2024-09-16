@@ -15,7 +15,7 @@ export default function Home() {
   }
   return (
     <div>
-      <Appbar logged={logger} />
+      <Appbar />
       <div className="h-full p-3 grid grid-cols-4 grid-rows-2 gap-2">
         <div className="row-span-2 col-span-2 overflow-hidden rounded-2xl">
           <HeroSlider />

@@ -1,3 +1,4 @@
+'use client'
 import { ProductProps } from "@/app/Category/page";
 import { Details } from "./Details";
 import React from "react";
