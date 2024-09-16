@@ -1,5 +1,4 @@
-"use client";
-
+'use client'
 import CategoryCard from "@/components/CategoryCard";
 import { Tagline } from "@/components/Tagline";
 import { useState, useEffect } from "react";
@@ -15,7 +14,7 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import { Appbar } from "@/components/Appbar";
 
-import {initialProducts} from '@/asset'
+import {initialProducts} from '@/app/asset'
 // Define the product type
 export type ProductProps = {
   id: number;

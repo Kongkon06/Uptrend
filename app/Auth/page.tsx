@@ -23,7 +23,7 @@ export default function Auth({ type }: { type: "signup" | "signin" }) {
   return (
     <div className="h-screen font-dm-sans flex justify-center items-center">
       <div className="bg-white p-6 rounded-xl shadow-2xl w-full sm:w-auto lg:w-2/5">
-        <div className="font-semibold text-xl lg:text-3xl mb-4 text-center">
+        <div className="font-semibold font-dm-sans text-xl lg:text-3xl mb-4 text-center">
           {type === "signup" ? "Create an account" : "Sign in"}
         </div>
         {type === "signup" && (
