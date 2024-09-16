@@ -1,6 +1,6 @@
 "use client";
 
-import { CategoryCard } from "@/components/CategoryCard";
+import  CategoryCard  from "@/components/CategoryCard";   //Changes done
 import { Tagline } from "@/components/Tagline";
 import { useState, useEffect } from "react";
 import { Slider } from "@/components/ui/slider";
@@ -62,7 +62,7 @@ export default function Category() {
         product.price <= priceRange[1]
     );
 
-    filteredProducts.sort((a, b) => {
+    filteredProducts.sort((a:ProductProps, b:ProductProps) => {
       if (sortBy === "price-asc") return a.price - b.price;
       if (sortBy === "price-desc") return b.price - a.price;
       return a.name.localeCompare(b.name);
