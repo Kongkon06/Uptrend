@@ -1,6 +1,6 @@
 "use client";
 
-import  CategoryCard  from "@/components/CategoryCard";   //Changes done
+import { CategoryCard } from "@/components/CategoryCard";
 import { Tagline } from "@/components/Tagline";
 import { useState, useEffect } from "react";
 import { Slider } from "@/components/ui/slider";
@@ -29,12 +29,29 @@ export type ProductProps = {
 
 export default function Category() {
 
-  const [products, setProducts] = useState<ProductProps[] | any>(initialProducts);
+  const [products, setProducts] = useState<ProductProps[]>(initialProducts); // Explicit type
   const [categories, setCategories] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [sortBy, setSortBy] = useState<string>("name");
 
-  // Handle category change
+  useEffect(() => {
+    // Filter products based on category and price range
+    const filteredProducts = initialProducts.filter((product: ProductProps) => 
+      (categories.length === 0 || categories.includes(product.category)) &&
+      product.price >= priceRange[0] &&
+      product.price <= priceRange[1]
+    );
+
+    // Sort the filtered products
+    filteredProducts.sort((a, b) => {
+      if (sortBy === "price-asc") return a.price - b.price;
+      if (sortBy === "price-desc") return b.price - a.price;
+      return a.name.localeCompare(b.name);
+    });
+
+    setProducts(filteredProducts);
+  }, [categories, priceRange, sortBy]);
+
   const handleCategoryChange = (category: string) => {
     setCategories((prevCategories) =>
       prevCategories.includes(category)
@@ -43,12 +60,10 @@ export default function Category() {
     );
   };
 
-  // Handle price range change
   const handlePriceChange = (value: [number, number]) => {
     setPriceRange([value[0], value[1]]);
   };
 
-  // Handle sort change
   const handleSortChange = (value: string) => {
     setSortBy(value);
   };
@@ -62,7 +77,7 @@ export default function Category() {
         product.price <= priceRange[1]
     );
 
-    filteredProducts.sort((a:ProductProps, b:ProductProps) => {
+    filteredProducts.sort((a, b) => {
       if (sortBy === "price-asc") return a.price - b.price;
       if (sortBy === "price-desc") return b.price - a.price;
       return a.name.localeCompare(b.name);
@@ -72,7 +87,7 @@ export default function Category() {
   }, [categories, priceRange, sortBy]);
 
   return (
-    <div>
+    <div className="font-dm-sans">
       <Appbar />
       <Tagline />
       <div className="flex">
