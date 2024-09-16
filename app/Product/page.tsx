@@ -6,13 +6,13 @@ export default function (){
     <Appbar />
     <div className="h-screen flex font-dm-sans ">
         <div className="h-screen w-56 font-dm-sans font-semibold flex flex-col text-xl bg-slate-300">
-            <div className="pl-3 h-16 flex items-center border-slate-900 border-b-2 pl-5">
+            <div className="pl-5 h-16 flex items-center border-slate-900 border-b-2 ">
                 Filter
             </div>
-            <div className="pl-3 h-16 flex items-center border-slate-900 border-b-2 pl-5">
+            <div className="pl-5 h-16 flex items-center border-slate-900 border-b-2 ">
                 Casual
             </div>
-            <div className="pl-3 h-16 flex items-center border-slate-900 border-b-2 pl-5">
+            <div className="pl-5 h-16 flex items-center border-slate-900 border-b-2 ">
                 Summer wear
             </div>
         </div>
