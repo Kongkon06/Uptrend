@@ -1,6 +1,14 @@
 import {} from "./assets/Product_10/image_1.jpg"
 export const initialProducts = [
-
+  {
+    id: 1,
+    name: "Leriya Fashion Men's Regular Fit Shirt",
+    category: "Clothing",
+    price: 229.0,
+    image: "https://i.pinimg.com/originals/69/20/f2/6920f212a7d4868e7263baacfaaa5649.jpg",
+    description: "High-quality cloth material with soft and comfortable fit for all-day.",
+    brand: "Leriya Fashion",
+  },
   {
     id: 2,
     name: "Knitted Square Neck T-Shirt Short Sleeve Tops",
