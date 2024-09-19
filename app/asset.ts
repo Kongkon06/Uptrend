@@ -1,5 +1,6 @@
 import {} from "./assets/Product_10/image_1.jpg"
 export const initialProducts = [
+<<<<<<< HEAD
   {
     id: 1,
     name: "Leriya Fashion Men's Regular Fit Shirt",
@@ -9,6 +10,9 @@ export const initialProducts = [
     description: "High-quality cloth material with soft and comfortable fit for all-day.",
     brand: "Leriya Fashion",
   },
+=======
+
+>>>>>>> a6d2cf31f11716c5b8b6f09f6264303b49e5c170
   {
     id: 2,
     name: "Knitted Square Neck T-Shirt Short Sleeve Tops",

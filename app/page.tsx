@@ -6,10 +6,10 @@ import { Appbar } from "@/components/Appbar";
 import { Card } from "@/components/Card";
 import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
-
+import { initialProducts } from './asset';
 export default function Home() {
   const [isloggedin, setIsLoggedIn] = useState<boolean>(false); //changes
-
+  const product = initialProducts
   const logger = (isloggedin: boolean) => {       //changes
     setIsLoggedIn(isloggedin);
   }
@@ -21,32 +21,32 @@ export default function Home() {
           <HeroSlider />
         </div>
         <div className=" h-64 rounded-r-2xl">
-          <Card />
+          <Card product={product[0].image} />
         </div>
         <div className="h-64 rounded-r-2xl">
-          <Card />
+          <Card product={product[1].image} />
         </div>
         <div className="h-64 rounded-r-2xl">
-          <Card />
+          <Card product={product[2].image}/>
         </div>
         <div className="h-64 rounded-r-2xl">
-          <Card />
+          <Card product={product[3].image}/>
         </div>
       </div>
       <div className=" my-2 h-full p-3 gap-2">
         <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">Trending</div>
     </div>
-    <div className="h-96 p-3"><Card/></div>
+    <div className="h-96 p-3"><Card product={product[0].image}/></div>
     <div className=" my-2 h-full p- grid grid-cols-4 gap-2">
         <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">Featured</div>
     </div>
     <div className='h-full p-3 grid grid-cols-3 grid-rows-1 gap-2'>
-     <div className="row-span-1"><Card/></div>
-     <div className="h-96"><Card/></div>
-     <div className="h-96"><Card/></div>
+     <div className="row-span-1"><Card product={product[0].image}/></div>
+     <div className="h-96"><Card product={product[0].image}/></div>
+     <div className="h-96"><Card product={product[0].image}/></div>
     </div>
     <div> 
-    <div className="h-96 p-3"><Card/></div>
+    <div className="h-96 p-3"><Card product={product[0].image}/></div>
     </div>
 
     <div className=" my-2 h-full p- grid grid-cols-4 gap-2">

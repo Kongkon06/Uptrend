@@ -1,7 +1,9 @@
 import { Appbar } from "@/components/Appbar";
 import { Suggestion } from "@/components/Similiar";
+import { initialProducts } from "../asset";
 
 export default function (){
+    const product = initialProducts
     return<div >
     <Appbar />
     <div className="h-screen flex font-dm-sans ">
@@ -21,7 +23,7 @@ export default function (){
                 <div className=" flex justify-center">
                     <img
                         className="shadow-xl h-auto w-4/6 aspect-5/7"
-                        src="https://i.pinimg.com/originals/69/20/f2/6920f212a7d4868e7263baacfaaa5649.jpg"
+                        src={product[0].image}
                         alt="description of image"
                     />
 
