@@ -74,7 +74,7 @@ export default function (){
                     </button>
                 </div>
                 <div className="mt-10 w-auto p-2 text-2xl flex flex-col">
-                    <div className="flex justify-between border-b-2 border-slate-300 py-3 mr-2"><div className=" ">Description</div>
+                    <div className="flex justify-between border-b-2 border-slate-300 py-3 mr-2 "><div className=" ">Description</div>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="size-6">
                     <path d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                     </svg>
