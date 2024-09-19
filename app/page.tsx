@@ -42,8 +42,8 @@ export default function Home() {
     </div>
     <div className='h-full p-3 grid grid-cols-3 grid-rows-1 gap-2'>
      <div className="row-span-1"><Card product={product[0].image}/></div>
-     <div className="h-96"><Card product={product[0].image}/></div>
-     <div className="h-96"><Card product={product[0].image}/></div>
+     <div className="row-span-1"><Card product={product[0].image}/></div>
+     <div className="row-span-1"><Card product={product[0].image}/></div>
     </div>
     <div> 
     <div className="h-96 p-3"><Card product={product[0].image}/></div>
