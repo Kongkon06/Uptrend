@@ -29,7 +29,7 @@ export type ProductProps = {
 };
 
 export default function Category() {
-  const [products, setProducts] = useState<ProductProps[]>(initialProducts); // Explicit type
+  const products= initialProducts; // Explicit type
   const [categories, setCategories] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [sortBy, setSortBy] = useState<string>('name');
@@ -68,9 +68,6 @@ export default function Category() {
     return result;
   }, [categories, priceRange, sortBy]);
 
-  useEffect(() => {
-    setProducts(filteredProducts);
-  }, [filteredProducts]);
   console.log("render");
   return (
     <div className="font-dm-sans">
