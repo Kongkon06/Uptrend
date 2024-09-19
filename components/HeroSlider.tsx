@@ -24,16 +24,27 @@ const HeroSlider = () => {
           >
             <SwiperSlide className='bg-red-300 min-h-[100vh]'>
                 <span className='relative'>
-                    What
+                <img src='' />
                 </span>
             </SwiperSlide>
-            <SwiperSlide className='bg-red-300 min-h-[100vh]'>Photo 2</SwiperSlide>
-            <SwiperSlide className='bg-blue-300 min-h-[100vh]'>Photo 3</SwiperSlide>
-            <SwiperSlide className='bg-green-300 min-h-[100vh]'>Photo 4</SwiperSlide>
-            <SwiperSlide className='bg-yellow-300 min-h-[100vh]'>Photo 5</SwiperSlide> 
+            <SwiperSlide className='  min-h-[100vh]'>
+            <img src=' '  />
+            </SwiperSlide>
+            <SwiperSlide className='bg-blue-300 min-h-[100vh]'>
+            <img src=' ' />
+            </SwiperSlide>
+            <SwiperSlide className='bg-green-300 min-h-[100vh]'>
+            <img src='' />
+            </SwiperSlide>
+            <SwiperSlide className='bg-yellow-300 min-h-[100vh]'>
+
+              </SwiperSlide> 
           </Swiper>
         </div>
       );
 }
 
 export default HeroSlider
+        
+
+
