@@ -5,7 +5,7 @@ export const initialProducts = [
     name: "Leriya Fashion Men's Regular Fit Shirt",
     category: "Clothing",
     price: 229.0,
-    image: "https://www.bing.com/images/blob?bcid=r97VXWH9fYAHdhNXM9kxn.SNPedY.....4g",
+    image: "https://i.pinimg.com/originals/69/20/f2/6920f212a7d4868e7263baacfaaa5649.jpg",
     description: "High-quality cloth material with soft and comfortable fit for all-day.",
     brand: "Leriya Fashion",
   },
