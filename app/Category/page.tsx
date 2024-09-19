@@ -1,20 +1,22 @@
-'use client'
-import CategoryCard from "@/components/CategoryCard";
-import { Tagline } from "@/components/Tagline";
-import { useState, useEffect } from "react";
-import { Slider } from "@/components/ui/slider";
-import { Checkbox } from "@/components/ui/checkbox";
+'use client';
+
+import CategoryCard from '@/components/CategoryCard';
+import { Tagline } from '@/components/Tagline';
+import { useState, useEffect, useMemo } from 'react';
+import { Slider } from '@/components/ui/slider';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select";
-import { Card, CardContent } from "@/components/ui/card";
-import { Appbar } from "@/components/Appbar";
+} from '@/components/ui/select';
+import { Card, CardContent } from '@/components/ui/card';
+import { Appbar } from '@/components/Appbar';
 
-import {initialProducts} from '@/app/asset'
+import { initialProducts } from '@/app/asset';
+
 // Define the product type
 export type ProductProps = {
   id: number;
@@ -27,29 +29,10 @@ export type ProductProps = {
 };
 
 export default function Category() {
-
   const [products, setProducts] = useState<ProductProps[]>(initialProducts); // Explicit type
   const [categories, setCategories] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
-  const [sortBy, setSortBy] = useState<string>("name");
-
-  useEffect(() => {
-    // Filter products based on category and price range
-    const filteredProducts = initialProducts.filter((product: ProductProps) => 
-      (categories.length === 0 || categories.includes(product.category)) &&
-      product.price >= priceRange[0] &&
-      product.price <= priceRange[1]
-    );
-
-    // Sort the filtered products
-    filteredProducts.sort((a, b) => {
-      if (sortBy === "price-asc") return a.price - b.price;
-      if (sortBy === "price-desc") return b.price - a.price;
-      return a.name.localeCompare(b.name);
-    });
-
-    setProducts(filteredProducts);
-  }, [categories, priceRange, sortBy]);
+  const [sortBy, setSortBy] = useState<string>('name');
 
   const handleCategoryChange = (category: string) => {
     setCategories((prevCategories) =>
@@ -67,6 +50,28 @@ export default function Category() {
     setSortBy(value);
   };
 
+  // Filter and sort products using useMemo for optimization
+  const filteredProducts = useMemo(() => {
+    const result = initialProducts.filter(
+      (product: ProductProps) =>
+        (categories.length === 0 || categories.includes(product.category)) &&
+        product.price >= priceRange[0] &&
+        product.price <= priceRange[1]
+    );
+
+    result.sort((a, b) => {
+      if (sortBy === 'price-asc') return a.price - b.price;
+      if (sortBy === 'price-desc') return b.price - a.price;
+      return a.name.localeCompare(b.name);
+    });
+
+    return result;
+  }, [categories, priceRange, sortBy]);
+
+  useEffect(() => {
+    setProducts(filteredProducts);
+  }, [filteredProducts]);
+  console.log("render");
   return (
     <div className="font-dm-sans">
       <Appbar />
@@ -74,11 +79,9 @@ export default function Category() {
       <div className="flex">
         <div className="h-screen bg-slate-700">
           <div>
-            <div>
-              <span className="ml-3 pt-8 text-xl text-white font-semibold">
-                Filter
-              </span>
-            </div>
+            <span className="ml-3 pt-8 text-xl text-white font-semibold">
+              Filter
+            </span>
             <div className="mx-auto pl-2">
               <div className="p-4">
                 <div className="space-y-6">
@@ -86,28 +89,21 @@ export default function Category() {
                     <CardContent className="p-4">
                       <h2 className="text-lg font-semibold mb-4">Categories</h2>
                       <div className="space-y-2">
-                        {["Clothing", "Shoes", "Accessories"].map(
-                          (category) => (
-                            <div
-                              key={category}
-                              className="flex items-center space-x-2"
+                        {['Clothing', 'Shoes', 'Accessories'].map((category) => (
+                          <div key={category} className="flex items-center space-x-2">
+                            <Checkbox
+                              id={category}
+                              checked={categories.includes(category)}
+                              onCheckedChange={() => handleCategoryChange(category)}
+                            />
+                            <label
+                              htmlFor={category}
+                              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                             >
-                              <Checkbox
-                                id={category}
-                                checked={categories.includes(category)}
-                                onCheckedChange={() =>
-                                  handleCategoryChange(category)
-                                }
-                              />
-                              <label
-                                htmlFor={category}
-                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                              >
-                                {category}
-                              </label>
-                            </div>
-                          )
-                        )}
+                              {category}
+                            </label>
+                          </div>
+                        ))}
                       </div>
                     </CardContent>
                   </Card>
@@ -139,12 +135,8 @@ export default function Category() {
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="name">Name</SelectItem>
-                      <SelectItem value="price-asc">
-                        Price: Low to High
-                      </SelectItem>
-                      <SelectItem value="price-desc">
-                        Price: High to Low
-                      </SelectItem>
+                      <SelectItem value="price-asc">Price: Low to High</SelectItem>
+                      <SelectItem value="price-desc">Price: High to Low</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>

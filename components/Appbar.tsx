@@ -46,25 +46,6 @@ export function Appbar() {
           <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
           <span className="relative text-slate-600 ">All Products</span>
         </button>
-        <DropdownMenu>
-          <DropdownMenuTrigger>
-            <button className="relative inline-block font-medium group py-1.5 px-2.5 bg-slate-600 rounded-full hover:bg-white hover:text-slate-600 transform duration-400">
-              <User />
-            </button>
-          </DropdownMenuTrigger>
-          <DropdownMenuContent className="mr-10 mt-3">
-            <DropdownMenuLabel>My Account</DropdownMenuLabel>
-            <DropdownMenuSeparator />
-            <DropdownMenuItem>Profile</DropdownMenuItem>
-            <DropdownMenuItem>Address</DropdownMenuItem>
-            <DropdownMenuItem>Others</DropdownMenuItem>
-            <DropdownMenuItem>
-              <button >
-                Log out
-              </button>
-            </DropdownMenuItem>
-          </DropdownMenuContent>
-        </DropdownMenu>
       </div>
       <div className="sm:hidden flex items-center">
         <DrawerNavigation />
