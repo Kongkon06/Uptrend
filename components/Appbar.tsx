@@ -22,7 +22,7 @@ export function Appbar() {
   return (
     <div className="h-20 flex justify-between bg-slate-900 px-8">
       <div className="gap-4 h-full text-5xl font-dm-sans text-white font-semibold flex items-center">
-        Hoodie
+        <Image className="w-20 object-contain" src={Logo2} alt=""/>
       </div>
       <div
         className={
