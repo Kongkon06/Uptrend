@@ -16,6 +16,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Appbar } from '@/components/Appbar';
 
 import { initialProducts } from '@/app/asset';
+import Link from 'next/link';
 
 // Define the product type
 export type ProductProps = {
@@ -144,10 +145,12 @@ export default function Category() {
         <div className="h-full w-full">
           <div className="p-3 w-full grid grid-cols-3 gap-2">
             {products.map((product) => (
-              <div key={product.id}>
-                <CategoryCard product={product} />
+              <div role='button'key={product.id}>
+                <Link href={`/Product/${product.id}`}> <CategoryCard product={product} /></Link>
               </div>
+           
             ))}
+               <CategoryCard product={products[0]}/>
           </div>
         </div>
       </div>

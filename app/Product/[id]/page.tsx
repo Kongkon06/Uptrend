@@ -1,9 +1,11 @@
 import { Appbar } from "@/components/Appbar";
 import { Suggestion } from "@/components/Similiar";
-import { initialProducts } from "../asset";
+import { initialProducts } from "@/app/asset"; 
 
-export default function (){
+export default function ({ params }: { params: { id: string } }){
     const product = initialProducts
+    const id= params.id;
+    const index= Number(id);
     return<div >
     <Appbar />
     <div className="h-screen flex font-dm-sans ">
@@ -20,10 +22,10 @@ export default function (){
         </div>
         <div><div className="w-full p-3 grid grid-cols-5 gap-2">
             <div className="col-span-3">
-                <div className=" flex justify-center">
+                <div className=" flex h-full justify-center">
                     <img
-                        className="shadow-xl h-auto w-4/6 aspect-5/7"
-                        src={product[0].image}
+                        className="shadow-xl h-auto object-cover aspect-5/7"
+                        src={product[index].image}
                         alt="description of image"
                     />
 

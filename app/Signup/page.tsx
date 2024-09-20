@@ -8,7 +8,7 @@ interface SignupInput {
   password: string;
 }
 
-export default function Auth({ type }: { type: "signup" | "signin" }) {
+export default function () {
   const navigate = useRouter();
   const [postInputs, setPostInputs] = useState<SignupInput>({
     email: "",
@@ -24,8 +24,16 @@ export default function Auth({ type }: { type: "signup" | "signin" }) {
     <div className="h-screen font-dm-sans flex justify-center items-center">
       <div className="bg-white p-6 rounded-xl shadow-2xl w-full sm:w-auto lg:w-2/5">
         <div className="font-semibold font-dm-sans text-xl lg:text-3xl mb-4 text-center">
-          Sign in
+         Create an account
         </div>
+          <LabelledInput
+            label="Email"
+            placeholder="user12@email"
+            onChange={(e) =>
+              setPostInputs((c) => ({ ...c, email: e.target.value }))
+            }
+          />
+        
         <LabelledInput
           label="Username"
           placeholder="Enter username"
@@ -46,19 +54,18 @@ export default function Auth({ type }: { type: "signup" | "signin" }) {
           onClick={sendRequest}
           className="w-full mt-4 bg-indigo-700 hover:bg-indigo-600 text-white font-bold rounded-lg px-4 py-2 focus:outline-none"
         >
-          Sign in
+       Sign up
         </button>
         <div className="text-center mt-3">
-            <>
-              Don't have an account?{" "}
+              Already have an account?{" "}
               <span
                 role="button"
-                onClick={() => navigate.push("/Signup")}
+                onClick={() => navigate.push("/Auth")}
                 className="underline cursor-pointer"
               >
-                Sign up
+                Login
               </span>
-            </>
+          
         </div>
       </div>
     </div>
