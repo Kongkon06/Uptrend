@@ -22,7 +22,7 @@ export function Appbar() {
   return (
     <div className="h-20 flex justify-between bg-slate-900 px-8">
       <div className="gap-4 h-full text-5xl font-dm-sans text-white font-semibold flex items-center">
-      <Image className="object-cover bg-blend-overlay" src={Logo1} alt="Logo" width={100} height={100} />
+        Hoodie
       </div>
       <div
         className={
@@ -41,7 +41,7 @@ export function Appbar() {
         </button>
         <DropdownMenu>
       <DropdownMenuTrigger>
-      <div className=" flex flex-col relative inline-block font-medium group py-1.5 px-2.5 ">
+      <div className="  flex-col relative inline-block font-medium group py-1.5 px-2.5 ">
           <span className="absolute inset-0 w-full h-full rounded-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-slate-200 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full rounded-full border border-indigo-600 bg-slate-900"></span>
           <span className="relative text-slate-100 "><User /></span>
