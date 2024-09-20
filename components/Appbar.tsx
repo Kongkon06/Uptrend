@@ -12,7 +12,9 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-
+import  Logo2 from "@/components/assets/Logo2.png"
+import  Logo1 from "@/components/assets/Logo 1.png"
+import Image from "next/image";
 export function Appbar() {
 
   const router = useRouter();
@@ -20,7 +22,7 @@ export function Appbar() {
   return (
     <div className="h-20 flex justify-between bg-slate-900 px-8">
       <div className="gap-4 h-full text-5xl font-dm-sans text-white font-semibold flex items-center">
-        Hoodie
+      <Image className="object-cover bg-blend-overlay" src={Logo1} alt="Logo" width={100} height={100} />
       </div>
       <div
         className={
@@ -53,7 +55,7 @@ export function Appbar() {
           <div>Profile</div>
           </DropdownMenuItem>
           <DropdownMenuItem className="DropdownMenuItem">
-          <div>Cart</div>
+          <div role="button" onClick={()=>router.push("/Cart")}>Cart</div>
           </DropdownMenuItem>
         </DropdownMenuContent>
         </DropdownMenu>
