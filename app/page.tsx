@@ -7,14 +7,19 @@ import { Card } from "@/components/Card";
 import HeroSlider from "@/components/HeroSlider";
 import Footer from "@/components/Footer";
 import { initialProducts } from './asset';
+import { DM_Sans } from '@next/font/google';
+const dm_sans = DM_Sans({
+  subsets: ['latin'],
+  weight:'400'
+});
 export default function Home() {
   const [isloggedin, setIsLoggedIn] = useState<boolean>(false); //changes
-  const product = initialProducts
+  const product = initialProducts;
   const logger = (isloggedin: boolean) => {       //changes
     setIsLoggedIn(isloggedin);
   }
   return (
-    <div>
+    <div className={dm_sans.className}>
       <Appbar />
       <div className="h-full p-3 grid grid-cols-4 grid-rows-2 gap-2">
         <div className="row-span-2 col-span-2 overflow-hidden rounded-2xl">

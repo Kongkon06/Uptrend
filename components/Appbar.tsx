@@ -11,14 +11,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useRouter } from "next/navigation";
+import { useState } from "react";
 
 export function Appbar() {
 
   const router = useRouter();
-
+  const [Open,isOpen] = useState(false);
   return (
-    <div className="h-20 flex justify-between font-dm-sans bg-slate-700 px-8">
-      <div className="gap-4 h-full text-5xl text-white font-semibold flex items-center">
+    <div className="h-20 flex justify-between bg-slate-900 px-8">
+      <div className="gap-4 h-full text-5xl font-dm-sans text-white font-semibold flex items-center">
         Hoodie
       </div>
       <div
@@ -26,30 +27,52 @@ export function Appbar() {
           "flex gap-5 items-center sm:text-xl text-white max-sm:hidden max-[320px]:text-xl"
         }
       >
-        <button className="relative inline-block font-medium group py-1.5 px-2.5">
-          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
-          <span className="relative text-slate-600 ">Men</span>
-        </button>
-        <button className="relative inline-block font-medium group py-1.5 px-2.5 ">
-          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-          <span className="absolute inset-0 w-full h-full bg-white border border-slate-600 group-hover:bg-indigo-50"></span>
-          <span className="relative text-slate-600 ">Women</span>
-        </button>
         <button className="relative inline-block font-medium group py-1.5 px-2.5 ">
           <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
           <span className="relative text-slate-600 ">Trending</span>
         </button>
-        <button onClick={()=>router.push('/Category')} className="relative inline-block font-medium group py-1.5 px-2.5 ">
+        <button onClick={() => router.push('/Category')} className="relative inline-block font-medium group py-1.5 px-2.5 ">
           <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
           <span className="relative text-slate-600 ">All Products</span>
         </button>
+        <DropdownMenu>
+      <DropdownMenuTrigger>
+      <button onClick={() => router.push('/Category')} className="relative inline-block font-medium group py-1.5 px-2.5 ">
+          <span className="absolute inset-0 w-full h-full rounded-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-slate-200 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full rounded-full border border-indigo-600 bg-slate-900"></span>
+          <span className="relative text-slate-100 "><User /></span>
+        </button>
+      </DropdownMenuTrigger>
+
+  
+        <DropdownMenuContent className="DropdownMenuContent" sideOffset={5}>
+          <DropdownMenuItem className="DropdownMenuItem">
+            <div role="button" onClick={()=>{router.push('/Auth')}}>Sigin</div>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="DropdownMenuItem">
+          <div>Profile</div>
+          </DropdownMenuItem>
+          <DropdownMenuItem className="DropdownMenuItem" disabled>
+          <div>Cart</div>
+          </DropdownMenuItem>
+          
+
+          <DropdownMenuSeparator className="DropdownMenuSeparator" />
+
+            Show Bookmarks <div className="RightSlot">⌘+B</div>
+
+          <DropdownMenuSeparator className="DropdownMenuSeparator" />
+
+          <DropdownMenuLabel className="DropdownMenuLabel">People</DropdownMenuLabel>
+        </DropdownMenuContent>
+        </DropdownMenu>
       </div>
+
       <div className="sm:hidden flex items-center">
         <DrawerNavigation />
       </div>
-    </div>
+        </div>
   );
-}
+};
