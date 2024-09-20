@@ -28,44 +28,33 @@ export function Appbar() {
         }
       >
         <button className="relative inline-block font-medium group py-1.5 px-2.5 ">
-          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
-          <span className="relative text-slate-600 ">Trending</span>
+          <span className="absolute inset-0 w-full h-full rounded-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-slate-200 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+          <span className="absolute inset-0 w-full h-full rounded-full border border-indigo-600 bg-slate-900"></span>
+          <span className="relative text-slate-100 ">Trending</span>
         </button>
         <button onClick={() => router.push('/Category')} className="relative inline-block font-medium group py-1.5 px-2.5 ">
-          <span className="absolute inset-0 w-full h-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-indigo-600 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
-          <span className="absolute inset-0 w-full h-full bg-white border border-indigo-600 group-hover:bg-indigo-50"></span>
-          <span className="relative text-slate-600 ">All Products</span>
+        <span className="absolute inset-0 w-full h-full rounded-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-slate-200 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
+        <span className="absolute inset-0 w-full h-full rounded-full border border-indigo-600 bg-slate-900"></span>
+          <span className="relative text-slate-100 ">All Products</span>
         </button>
         <DropdownMenu>
       <DropdownMenuTrigger>
-      <button onClick={() => router.push('/Category')} className="relative inline-block font-medium group py-1.5 px-2.5 ">
+      <div className=" flex flex-col relative inline-block font-medium group py-1.5 px-2.5 ">
           <span className="absolute inset-0 w-full h-full rounded-full transition duration-700 ease-out transform translate-x-1 translate-y-1 bg-slate-200 group-hover:-translate-x-0 group-hover:-translate-y-0"></span>
           <span className="absolute inset-0 w-full h-full rounded-full border border-indigo-600 bg-slate-900"></span>
           <span className="relative text-slate-100 "><User /></span>
-        </button>
+        </div>
       </DropdownMenuTrigger>
-
-  
         <DropdownMenuContent className="DropdownMenuContent" sideOffset={5}>
           <DropdownMenuItem className="DropdownMenuItem">
-            <div role="button" onClick={()=>{router.push('/Auth')}}>Sigin</div>
+            <div role="button" onClick={()=>router.push("/Auth")}>Sigin</div>
           </DropdownMenuItem>
           <DropdownMenuItem className="DropdownMenuItem">
           <div>Profile</div>
           </DropdownMenuItem>
-          <DropdownMenuItem className="DropdownMenuItem" disabled>
+          <DropdownMenuItem className="DropdownMenuItem">
           <div>Cart</div>
           </DropdownMenuItem>
-          
-
-          <DropdownMenuSeparator className="DropdownMenuSeparator" />
-
-            Show Bookmarks <div className="RightSlot">⌘+B</div>
-
-          <DropdownMenuSeparator className="DropdownMenuSeparator" />
-
-          <DropdownMenuLabel className="DropdownMenuLabel">People</DropdownMenuLabel>
         </DropdownMenuContent>
         </DropdownMenu>
       </div>
