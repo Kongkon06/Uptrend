@@ -1,30 +1,23 @@
+'use client'
 import { Appbar } from "@/components/Appbar";
 import { Suggestion } from "@/components/Similiar";
 import { initialProducts } from "@/app/asset"; 
+import { useSetRecoilState } from "recoil";
+import { Cartatom } from "@/app/Atoms";
 
 export default function ({ params }: { params: { id: string } }){
     const product = initialProducts
     const id= params.id;
-    const index= Number(id);
+    const setproduct = useSetRecoilState(Cartatom);
+    const index= Number(id)-1;
     return<div >
     <Appbar />
     <div className="h-screen flex font-dm-sans ">
-        <div className="h-screen w-56 font-dm-sans font-semibold flex flex-col text-xl bg-slate-300">
-            <div className="pl-5 h-16 flex items-center border-slate-900 border-b-2 ">
-                Filter
-            </div>
-            <div className="pl-5 h-16 flex items-center border-slate-900 border-b-2 ">
-                Casual
-            </div>
-            <div className="pl-5 h-16 flex items-center border-slate-900 border-b-2 ">
-                Summer wear
-            </div>
-        </div>
-        <div><div className="w-full p-3 grid grid-cols-5 gap-2">
+        <div className="w-full"><div className="w-full p-3 grid grid-cols-5 gap-2">
             <div className="col-span-3">
-                <div className=" flex h-full justify-center">
+                <div className=" flex h-full p-4 justify-center">
                     <img
-                        className="shadow-xl h-auto object-cover aspect-5/7"
+                        className="shadow-xl object-contain"
                         src={product[index].image}
                         alt="description of image"
                     />
@@ -33,13 +26,13 @@ export default function ({ params }: { params: { id: string } }){
             </div>
             <div className="col-span-2">
                 <div className="mt-4 text-3xl font-semibold">
-                    Prodect Name
+                    {product[index].name}
                 </div>
                 <div className="mt-4 text-xl font-light">
-                    Price
+                    {product[index].price}
                 </div>
                 <div className="mt-4 text-lg text-slate-400">
-                    Desccription
+                    {product[index].description}
                 </div>
                 <div className="mt-7 text-2xl ">
                     <div>Select color</div>
@@ -64,7 +57,7 @@ export default function ({ params }: { params: { id: string } }){
                     </div>
                 </div>
                 <div className="mt-7 text-2xl ">
-                    <button className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
+                    <button onClick={()=>{setproduct(product)}} className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800">
                         <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
                             Add to cart
                         </span>

@@ -1,4 +1,3 @@
-import {} from "./assets/Product_10/image_1.jpg"
 export const initialProducts = [
   {
     id: 1,
@@ -42,6 +41,15 @@ export const initialProducts = [
     category: "Clothing",
     price: 479.0,
     image: "https://img.freepik.com/premium-photo/white-hoodie-mockup_863013-110032.jpg",
+    description: "High-quality cloth material with soft and comfortable fit for all-day.",
+    brand: "Lymio Store",
+  },
+  {
+    id: 6,
+    name: "Lymio Casual Shirt for Men",
+    category: "Clothing",
+    price: 479.0,
+    image: "https://i.pinimg.com/564x/df/54/f1/df54f1c46d54a67f29fbc76f8f57f74d.jpg",
     description: "High-quality cloth material with soft and comfortable fit for all-day.",
     brand: "Lymio Store",
   },

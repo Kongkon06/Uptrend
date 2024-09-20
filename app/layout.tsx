@@ -1,4 +1,5 @@
-
+'use client'
+import { RecoilRoot } from "recoil";
 import "./globals.css";
 
 interface RootLayoutProps {
@@ -10,11 +11,12 @@ const dm_sans = DM_Sans({
   weight:'400'
 })
 export default function RootLayout({ children }: RootLayoutProps) {
-  return (
+  return (<RecoilRoot>
     <html lang="en">
       <body className={dm_sans.className}>
         {children}
       </body>
     </html>
+    </RecoilRoot>
   );
 }
