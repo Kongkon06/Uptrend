@@ -47,11 +47,11 @@ export default function Home() {
     </div>
     <div className='h-full p-3 grid grid-cols-3 grid-rows-1 gap-2'>
      <div className="row-span-1"><Card product={product[0].image}/></div>
-     <div className="row-span-1"><Card product={product[0].image}/></div>
-     <div className="row-span-1"><Card product={product[0].image}/></div>
+     <div className="row-span-1"><Card product={product[3].image}/></div>
+     <div className="row-span-1"><Card product={product[2].image}/></div>
     </div>
     <div> 
-    <div className="h-96 p-3"><Card product={product[0].image}/></div>
+    <div className='flex mt-28 gap-1'><img src='https://img.freepik.com/free-vector/abstract-fashion-monsoon-sale-banner-offer-discount-business-background-free-vector_1340-22460.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid' className='w-2/3'></img><img src='https://img.freepik.com/premium-photo/fashion-sales-template-design_639785-87243.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid'></img></div>
     </div>
 
     <div className=" my-2 h-full p- grid grid-cols-4 gap-2">
