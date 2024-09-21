@@ -20,9 +20,9 @@ export function Appbar() {
   const router = useRouter();
   const [Open,isOpen] = useState(false);
   return (
-    <div className="h-20 flex justify-between bg-slate-900 px-8">
-      <div className="gap-4 h-full text-5xl font-dm-sans text-white font-semibold flex items-center">
-        <Image className="w-20 object-contain" src={Logo2} alt=""/>
+    <div className="h-24 flex justify-between bg-white px-8">
+      <div className="gap-4 h-full  flex items-center">
+        <Image className="w-28 h-28 object-cover" src={Logo2} alt=""/>
       </div>
       <div
         className={
