@@ -75,7 +75,7 @@ export default function Category() {
       <Appbar />
       <Tagline />
       <div className="flex">
-        <div className="h-screen bg-slate-700">
+        <div className="h- bg-slate-700">
           <div>
             <span className="ml-3 pt-8 text-xl text-white font-semibold">
               Filter

@@ -1,22 +1,24 @@
 'use client'
 import { Appbar } from "@/components/Appbar";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { Cartatom } from "../Atoms";
-import CategoryCard from "@/components/CategoryCard";
-
+import { Cartcard } from "@/components/Cartcard";
 export default function Cart(){
-    const cartProducts = useRecoilValue(Cartatom);
+    const [cartProducts,setCart] = useRecoilState(Cartatom);
+    function del(id:number){
+ setCart(prevTodos => prevTodos.filter(todo => todo.id !== id));
+}
     return <div>
         <Appbar/>
         <div className="flex justify-center">
             <div className="w-2/5 h-auto px-4">
-            <div className="w-auto h-auto flex pt-4justify-between text-lg shadow-xl">
+            <div className="w-auto h-auto flex py-4 px-2 justify-between items-center text-lg shadow-xl">
                 <div>Address</div>
-                <button className="border-none text-blue">Change</button>
+                <button className="border-none text-indigo-700">Change</button>
             </div>
-        <div className=" mt-7 w-full h-full shadow-xl">
-        {cartProducts.map((product)=>(<div className="mb-2">
-            <CategoryCard product={product}/>
+        <div className=" mt-7 w-full h-auto shadow-xl">
+        {cartProducts.map((product)=>(<div className="mb-2 h-auto">
+            <Cartcard product={product} fn={()=>{del(product.id)}}/>
         </div>))}
         </div>
         </div>

@@ -22,10 +22,10 @@ export function Appbar() {
   const [Open, isOpen] = useState(false);
 
   return (
-    <>
+    <div className="shadow-xl">
       <div className="h-24 flex justify-between bg-white px-8">
-        <div className="gap-4 h-full flex items-center">
-          <Image className="w-28 h-28 object-cover" src={Logo2} alt="" />
+        <div role="button" onClick={()=>{router.push("/")}} className="gap-4 h-full flex items-center">
+          <Image className="w-28 h-auto object-cover" src={Logo2} alt="" />
         </div>
         <div className="flex gap-5 items-center sm:text-xl text-white max-sm:hidden max-[320px]:text-xl">
           <button className="relative inline-block font-medium group py-1.5 px-2.5">
@@ -64,6 +64,6 @@ export function Appbar() {
           <DrawerNavigation />
         </div>
       </div>
-    </>
+    </div>
   );
 }

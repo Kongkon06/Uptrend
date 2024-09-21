@@ -12,7 +12,7 @@ export default function ({ params }: { params: { id: string } }){
     const index= Number(id)-1;
     return<div >
     <Appbar />
-    <div className="h-screen flex font-dm-sans ">
+    <div className="h-100% flex font-dm-sans ">
         <div className="w-full"><div className="w-full p-3 grid grid-cols-5 gap-2">
             <div className="col-span-3">
                 <div className=" flex h-full p-4 justify-center">
