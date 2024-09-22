@@ -12,12 +12,12 @@ import Image from 'next/image';
 const HeroSlider = () => {
   const productlist = initialProducts;
     return (
-        <div className='h-[50vh] '>
+        <div className='h-[50vh]'>
           <Swiper 
-            direction={'vertical'} 
+            direction={'horizontal'} 
             loop= {true}
             centeredSlides={true}
-            slidesPerView={3}
+            slidesPerView={1}
             autoplay={{ delay: 1500 }}
             pagination={{
               clickable: true,
@@ -26,19 +26,19 @@ const HeroSlider = () => {
             className="mySwiper"
           >
             <SwiperSlide className='h-[50vh] bg-red-300'>
-                <Image src={Logo2} alt='' className='object-cover'/>
+                <img src={productlist[10].image} alt='' className='object-cover'/>
             </SwiperSlide>
-            <SwiperSlide className='  min-h-[100vh]'>
+            <SwiperSlide className='h-[50vh] '>
             <img src={productlist[7].image} className='object-cover' />
             </SwiperSlide>
-            <SwiperSlide className='bg-blue-300 min-h-[100vh]'>
+            <SwiperSlide className='h-[50vh] bg-blue-300'>
             <img  src={productlist[8].image} className='object-cover' />
             </SwiperSlide>
-            <SwiperSlide className='bg-green-300 min-h-[100vh]'>
-            <img  src={productlist[8].image} className='object-cover' />
+            <SwiperSlide className='h-[50vh] bg-green-300'>
+            <img  src={productlist[9].image} className='object-cover' />
             </SwiperSlide>
-            <SwiperSlide className='bg-yellow-300 flex items-center min-h-[100vh]'>
-            <img  src={productlist[6].image} className='h-72 object-contain' />
+            <SwiperSlide className='h-[50vh] bg-yellow-300'>
+            <img  src={productlist[6].image} className=' object-cover' />
               </SwiperSlide> 
           </Swiper>
         </div>
