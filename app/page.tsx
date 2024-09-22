@@ -29,27 +29,58 @@ export default function Home() {
           <Card product={product[0].image} />
         </div>
         <div className="h-64 rounded-r-2xl">
-          <Card product={product[1].image} />
+          <Card product={product[11].image} />
         </div>
         <div className="h-64 rounded-r-2xl">
-          <Card product={product[2].image}/>
+          <Card product={product[12].image}/>
         </div>
         <div className="h-64 rounded-r-2xl">
-          <Card product={product[3].image}/>
+          <Card product={product[8].image}/>
         </div>
       </div>
+
       <div className=" my-2 h-full p-3 gap-2">
         <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">Trending</div>
     </div>
-    <div className='h-full p-3 grid grid-cols-3 grid-rows-1 gap-2'>
+    <div className='h-full p-3 flex gap-6'>
     <div className="max-w-sm rounded overflow-hidden shadow-lg ">
     <img src="https://i.pinimg.com/564x/64/1a/8a/641a8a9050688e48bc77943a2ead4224.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
         <div className="font-medium text-lg mb-2">Golden Embroidered Sukajan Jacket</div>
         <p className="text-gray-700 text-base">Rs 799</p>
     </div>
+    </div>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+    <img src="https://overlaysnow.com/cdn/shop/files/Image-Edit-_10.jpg" alt="Description of the image" className="object-cover w-full h-72" />
+    <div className="px-6 py-4">
+        <div className="font-medium text-lg mb-2">Deconstructed Fawn Joggers</div>
+        <p className="text-gray-700 text-base">Rs 1699</p>
+    </div>
+    </div>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+    <img src="https://i.pinimg.com/564x/fa/f3/9e/faf39ecc2eed11e06285724adb99f612.jpg" alt="Description of the image" className="object-cover w-full h-72" />
+    <div className="px-6 py-4">
+        <div className="font-medium text-lg mb-2">Vintage Sukajan Jacket</div>
+        <p className="text-gray-700 text-base">Rs 899</p>
+    </div>
+     </div>
+     <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+    <img src="https://overlaysnow.com/cdn/shop/products/DSC00514.jpg?" alt="Description of the image" className="object-cover w-full h-72" />
+    <div className="px-6 py-4">
+        <div className="font-medium text-lg mb-2">Off-Grid Polo Tshirt - Blue</div>
+        <p className="text-gray-700 text-base">Rs 899</p>
+    </div>
+     </div>
+     <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+    <img src="https://overlaysnow.com/cdn/shop/files/AriseSleeveless_3.jpg" alt="Description of the image" className="object-cover w-full h-72" />
+    <div className="px-6 py-4">
+        <div className="font-medium text-lg mb-2">Arise Heavy Weight Sleeveless Tank Top </div>
+        <p className="text-gray-700 text-base">Rs 1299</p>
+    </div>
      </div>
     </div>
+    
+
     <div className=" my-2 h-full p- grid grid-cols-4 gap-2">
         <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">Featured</div>
     </div>
@@ -131,7 +162,5 @@ export default function Home() {
 <Footer/>
 </div>
   </div>
-
-    //</div>
   );
 }

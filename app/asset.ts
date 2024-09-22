@@ -100,5 +100,13 @@ export const initialProducts = [
     image: "https://overlaysnow.com/cdn/shop/files/Overlays-Edit-_1.jpg",
     description: "Featuring a unique street lovers STAR NASA Thick Aviator Jacket design with cotton fabrication, which makes it stylish and comfortable.",
     brand: "Overlays",
+  },{
+    id:13,
+    name: "Heavy weight Brown Joggers",
+    category: "Clothing",
+    price: 1999.0,
+    image: "https://overlaysnow.com/cdn/shop/files/1_5d7b18fe-bc7c-42db-b19e-42531c7e6fbe.png",
+    description: "Featuring a unique street lovers STAR NASA Thick Aviator Jacket design with cotton fabrication, which makes it stylish and comfortable.",
+    brand: "Overlays",
   }
 ];
