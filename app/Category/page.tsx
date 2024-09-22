@@ -3,16 +3,16 @@
 import CategoryCard from '@/components/CategoryCard';
 import { Tagline } from '@/components/Tagline';
 import { useState, useMemo } from 'react';
-import { Slider } from '@/components/ui/Slider'; 
-import { Checkbox } from '@/components/ui/Checkbox';
+import { Slider } from '@/components/ui/slider'; 
+import { Checkbox } from '@/components/ui/checkbox';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from '@/components/ui/Select';
-import { Card, CardContent } from '@/components/ui/Card';
+} from '@/components/ui/select';
+import { Card, CardContent } from '@/components/ui/card';
 import { Appbar } from '@/components/Appbar';
 
 import { initialProducts } from '@/app/asset';
