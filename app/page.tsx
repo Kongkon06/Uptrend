@@ -86,6 +86,8 @@ export default function Home() {
      <div className="row-span-1"><Card product={product[10].image}/></div>
     </div>
 
+  
+
     <div className="my-2 h-full p-3 grid grid-cols-4 gap-2">
   <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">BestSellers</div>
 </div>
@@ -124,6 +126,10 @@ export default function Home() {
   </div>
 </div>
 
+<div className='h-16 mt-20 text-balance'>
+  <p className='font-serif  font-light text-center justify-center'>"Created these clothes for those people who are here to conquer. If this were a 1,000 years ago, we made these for the men who would come on horses and burn armies alone. In today's world, they change, work and push limits to become Extarordinary."
+</p>
+</div>
 
     <div> 
     <div className='flex mt-28 gap-1'><img src='https://img.freepik.com/premium-vector/new-collection-sale-banner-design_105164-276.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid' className='w-2/3'></img><img src='https://img.freepik.com/premium-photo/fashion-sales-template-design_639785-87243.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid'></img></div>
@@ -162,6 +168,27 @@ export default function Home() {
 </div>
 </div>
     </div>
+
+    <div className=" mt-16">
+        <div className="h-20  flex justify-center items-center text-4xl font-semibold font-dm-sans">Join the Fashion Community</div>
+    </div>
+    <div className=' h-96 grid grid-cols-7 row-span-2'>
+      <img src='https://scontent.cdninstagram.com/v/t39.30808-6/460936119_18017316266539604_8022825627851811085_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=18de74&_nc_ohc=trRyEpLgCCsQ7kNvgHkkJWH&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=A3G5sgODVAIZf__7WbjCjj6&oh=00_AYBtRF5_4bJTI9sl36dHK8JOxmU_3Bo1sgnwKZKWGPVvOw&oe=66F5BC9F' className='h-64 w-64 ml-5'></img>
+      <img src='https://scontent.cdninstagram.com/v/t39.30808-6/459831572_18017180288539604_1243747564988340132_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=xjdhiBTqxsoQ7kNvgHY3fu9&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=A3G5sgODVAIZf__7WbjCjj6&oh=00_AYA-tUJAxeKu68YgSaj90w6jZ7PslezLXi0WBP6vQelgpA&oe=66F5AD2C' className='h-64 w-64'></img>
+      <img src='https://scontent.cdninstagram.com/v/t39.30808-6/460390632_18016872440539604_759852858870524343_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=18de74&_nc_ohc=KMCeP3k3lekQ7kNvgEpSqT0&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=A3G5sgODVAIZf__7WbjCjj6&oh=00_AYDjTDYZ2FtqWqYQoH_6aQ3RHN403oTmGUaLliXEFKos7w&oe=66F5A4DB' className='h-64'></img>
+      <img src='https://scontent.cdninstagram.com/v/t39.30808-6/460630666_18017089604539604_6513744861070958340_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=t0eF3rqUBjwQ7kNvgGRO-r_&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=A3G5sgODVAIZf__7WbjCjj6&oh=00_AYCWv7uGDuBH-YPUt7QWn2c03jbKwidYPvHBMJhl7Ak6ag&oe=66F5B310' className='h-64 w-64'></img>
+      <img src='https://scontent.cdninstagram.com/v/t39.30808-6/459411803_18016385558539604_511334207690922802_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=18de74&_nc_ohc=DZcKAdfae-YQ7kNvgFIQ5Zp&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=A3G5sgODVAIZf__7WbjCjj6&oh=00_AYDg4iCSIQODQRPiRPivFuPwFvmviTrEaYImFxJrJbaORw&oe=66F5AA0E' className='h-64'></img>
+      <img src='https://scontent.cdninstagram.com/v/t39.30808-6/460890582_18017324069539604_3247764249949894787_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=HfcUUiKNAf8Q7kNvgHL_X6M&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=A3G5sgODVAIZf__7WbjCjj6&oh=00_AYB_X--SUyUQTTDbmMjL-MXaIY98Eg4vCc0R2mzTab4keA&oe=66F59FA4'className='h-64 '></img>
+      <img src='https://scontent.cdninstagram.com/v/t39.30808-6/460630666_18017089604539604_6513744861070958340_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=18de74&_nc_ohc=t0eF3rqUBjwQ7kNvgGRO-r_&_nc_ht=scontent.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=A3G5sgODVAIZf__7WbjCjj6&oh=00_AYCWv7uGDuBH-YPUt7QWn2c03jbKwidYPvHBMJhl7Ak6ag&oe=66F5B310' className='h-64 w-64 '></img>
+      <img src='https://overlaysnow.com/cdn/shop/products/DSC01778.jpg' className='h-64 w-64 ml-5'></img>
+      <img src='https://overlaysnow.com/cdn/shop/files/IMG_1201.jpg?v=1720971631&width=800'  className='h-64 w-96'></img>
+      <img src='https://overlaysnow.com/cdn/shop/files/2_f33afa98-e96c-4883-8022-96d1e66f9899.jpg' className='h-64'></img>
+      <img src='https://overlaysnow.com/cdn/shop/files/2_401d5773-baa3-4f97-a694-cfad570243e4.jpg' className='h-64 w-64'></img>
+      <img src='https://overlaysnow.com/cdn/shop/files/2_6386bd76-e742-4678-a81d-b4dfe95b144c.jpg' className='h-64'></img>
+      <img src='https://overlaysnow.com/cdn/shop/files/DSC00946copy.jpg?'className='h-64'></img>
+      <img src='https://overlaysnow.com/cdn/shop/files/GreywildPhoto_4.jpg' className='h-64 w-64 '></img>
+    </div>
+
 <div className="h-full flex justify-center p-8">
 <Footer/>
 </div>
