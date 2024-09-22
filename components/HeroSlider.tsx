@@ -7,8 +7,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { initialProducts } from '@/app/asset';
-import Logo2 from '@/components/assets/Logo2.png'
-import Image from 'next/image';
 const HeroSlider = () => {
   const productlist = initialProducts;
     return (
@@ -26,20 +24,17 @@ const HeroSlider = () => {
             className="mySwiper"
           >
             <SwiperSlide className='h-[50vh] bg-red-300'>
-                <img src={productlist[10].image} alt='' className='object-cover'/>
+                <img src="https://img.freepik.com/premium-vector/new-arrival-sale-banner_79298-58.jpg?w=996" alt='' className='object-cover'/>
             </SwiperSlide>
             <SwiperSlide className='h-[50vh] '>
-            <img src={productlist[7].image} className='object-cover' />
+            <img src="https://img.freepik.com/premium-vector/offer-sale-banner_79298-57.jpg?w=996" className='object-cover' />
             </SwiperSlide>
             <SwiperSlide className='h-[50vh] bg-blue-300'>
-            <img  src={productlist[8].image} className='object-cover' />
+            <img  src="https://overlaysnow.com/cdn/shop/files/Coming-Soon.jpg" className='object-cover' />
             </SwiperSlide>
             <SwiperSlide className='h-[50vh] bg-green-300'>
-            <img  src={productlist[9].image} className='object-cover' />
+            <img  src="https://overlaysnow.com/cdn/shop/files/Fearless.jpg" className='object-cover' />
             </SwiperSlide>
-            <SwiperSlide className='h-[50vh] bg-yellow-300'>
-            <img  src={productlist[6].image} className=' object-cover' />
-              </SwiperSlide> 
           </Swiper>
         </div>
       );
