@@ -150,7 +150,7 @@ export default function Category() {
               </div>
            
             ))}
-               <CategoryCard product={products[0]}/>
+               
           </div>
         </div>
       </div>

@@ -24,7 +24,7 @@ export function Appbar() {
   return (
     <div className="shadow-xl">
       <div className="h-24 flex justify-between bg-white px-8">
-        <div role="button" onClick={()=>{router.push("/")}} className="gap-4 h-full flex items-center">
+        <div role="button" onClick={()=>{router.push("/")}} className="gap-4 h-full items-center">
           <Image className="w-28 h-auto object-cover" src={Logo2} alt="" />
         </div>
         <div className="flex gap-5 items-center sm:text-xl text-white max-sm:hidden max-[320px]:text-xl">
