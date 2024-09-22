@@ -97,29 +97,30 @@ export default function Home() {
     <div className='flex mt-28 gap-1'><img src='https://img.freepik.com/premium-vector/new-collection-sale-banner-design_105164-276.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid' className='w-2/3'></img><img src='https://img.freepik.com/premium-photo/fashion-sales-template-design_639785-87243.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid'></img></div>
     </div>
 
-    
-<div className='container h-full mt-32 '>
-<h2 className='font-extrabold text-5xl text-center ml-44'>Why Shop with Uptrend ?</h2>
-<ul className='list flex mt-28 '>
-  <li className='item ml-52'>
+    <div className='flex justify-center'>
+    <div className='container h-full mt-32 '>
+<h2 className='font-extrabold text-5xl text-center'>Why Shop with Uptrend ?</h2>
+<div className='flex justify-center'>
+<ul className='list w-4/5 flex justify-between mt-28 '>
+  <li className='item'>
     <div className='item-glassmorphism'>
       <img src='//overlaysnow.com/cdn/shop/files/New_Project_from_Photopea_3_100x.jpg?v=1726934197' className='ml-10'></img>
       <h3 className='item-title'>Made with Premium Cotton</h3>
     </div>
   </li>
-  <li className='item ml-56'>
+  <li className='item'>
   <div className='item-glassmorphism'>
       <img src='//overlaysnow.com/cdn/shop/files/Fast_Delivery_Icon_3db1c35d-cdd9-462a-8841-6809aab6ec28_100x.jpg?v=1726933523' className='ml-6'></img>
       <h3 className='item-title ml-6'>Fast & Free Delivery</h3>
     </div>
   </li>
-  <li className='item ml-52'>
+  <li className='item'>
   <div className='item-glassmorphism'>
       <img src='//overlaysnow.com/cdn/shop/files/Juicy_Fish_Icon_249f83b9-20d6-4d43-86d7-8add1fb34918_100x.jpg?v=1726933683' className='ml-4'></img>
       <h3 className='item-title mt-1'>Secure CheckOut</h3>
     </div>
   </li>
-  <li className='item ml-56'>
+  <li className='item'>
   <div className='item-glassmorphism'>
       <img src='//overlaysnow.com/cdn/shop/files/Screenshot_2024-09-21_at_9.14.25_PM_100x.png?v=1726933472' className='ml-2'></img>
       <h3 className='item-title mt-1'>7-day Return Policy</h3>
@@ -127,7 +128,9 @@ export default function Home() {
   </li>
 </ul>
 </div>
-<div className="h-full p-8">
+</div>
+    </div>
+<div className="h-full flex justify-center p-8">
 <Footer/>
 </div>
   </div>
