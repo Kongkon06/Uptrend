@@ -5,7 +5,7 @@ import React from 'react';
 const Footer: React.FC = () => {
   return (
     <footer className=" container bg-white-400 text-black h-96 py-4">
-      <div className='footer-top mt-28 grid-cols-3 flex gap-10'>
+      <div className='footer-top mt-48 grid-cols-3 flex gap-10'>
         <ul className='list ml-14'>
           <li><p className='list-title font-bold text-xl'>About us</p></li>
           <li><p className='list-text my-2'>Discover our latest collections and fashion trends.</p></li>
