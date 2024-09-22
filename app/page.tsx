@@ -42,7 +42,7 @@ export default function Home() {
       <div className=" my-2 h-full p-3 gap-2">
         <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">Trending</div>
     </div>
-    <div className='h-full p-3 flex gap-6'>
+    <div className='h-full p-3 flex justify-center gap-6'>
     <div className="max-w-sm rounded overflow-hidden shadow-lg ">
     <img src="https://i.pinimg.com/564x/64/1a/8a/641a8a9050688e48bc77943a2ead4224.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
@@ -90,39 +90,44 @@ export default function Home() {
      <div className="row-span-1"><Card product={product[10].image}/></div>
     </div>
 
-    <div className=" my-2 h-full p- grid grid-cols-4 gap-2">
-        <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">BestSellers</div>
-    </div>
-    <div className="h-full p-3 grid grid-cols-4 grid-rows-1 gap-1">
-    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+    <div className="my-2 h-full p-3 grid grid-cols-4 gap-2">
+  <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">BestSellers</div>
+</div>
+
+<div className="h-full p-3 grid grid-cols-4 gap-2 place-items-center">
+  <div className="w-full max-w-sm rounded overflow-hidden shadow-lg flex flex-col items-center">
     <img src="https://i.pinimg.com/564x/88/68/5f/88685ff42bc232465447b4411eb913b7.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
-        <div className="font-medium text-lg mb-2">STAR NASA Thick Aviator Jacket </div>
-        <p className="text-gray-700 text-base">Rs 1299</p>
+      <div className="font-medium text-lg mb-2">STAR NASA Thick Aviator Jacket</div>
+      <p className="text-gray-700 text-base">Rs 1299</p>
     </div>
-    </div>
-    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+  </div>
+  
+  <div className="w-full max-w-sm rounded overflow-hidden shadow-lg flex flex-col items-center">
     <img src="https://i.pinimg.com/564x/ed/96/d5/ed96d59392b19254a158d3b659f44372.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
-        <div className="font-medium text-lg mb-2">Autumn Embroidered Jacket Dragon Sukajan Jacket</div>
-        <p className="text-gray-700 text-base">Rs 1099</p>
+      <div className="font-medium text-lg mb-2">Autumn Embroidered Jacket Dragon Sukajan Jacket</div>
+      <p className="text-gray-700 text-base">Rs 1099</p>
     </div>
-    </div>
-    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+  </div>
+  
+  <div className="w-full max-w-sm rounded overflow-hidden shadow-lg flex flex-col items-center">
     <img src="https://i.pinimg.com/564x/64/1a/8a/641a8a9050688e48bc77943a2ead4224.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
-        <div className="font-medium text-lg mb-2">Golden Embroidered Sukajan Jacket</div>
-        <p className="text-gray-700 text-base">Rs 799</p>
+      <div className="font-medium text-lg mb-2">Golden Embroidered Sukajan Jacket</div>
+      <p className="text-gray-700 text-base">Rs 799</p>
     </div>
-    </div>
-    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+  </div>
+  
+  <div className="w-full max-w-sm rounded overflow-hidden shadow-lg flex flex-col items-center">
     <img src="https://i.pinimg.com/564x/fa/f3/9e/faf39ecc2eed11e06285724adb99f612.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
-        <div className="font-medium text-lg mb-2">Vintage Sukajan Jacket</div>
-        <p className="text-gray-700 text-base">Rs 899</p>
+      <div className="font-medium text-lg mb-2">Vintage Sukajan Jacket</div>
+      <p className="text-gray-700 text-base">Rs 899</p>
     </div>
-    </div>
+  </div>
 </div>
+
 
     <div> 
     <div className='flex mt-28 gap-1'><img src='https://img.freepik.com/premium-vector/new-collection-sale-banner-design_105164-276.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid' className='w-2/3'></img><img src='https://img.freepik.com/premium-photo/fashion-sales-template-design_639785-87243.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid'></img></div>
