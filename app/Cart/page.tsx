@@ -4,7 +4,7 @@ import { useRecoilState } from "recoil";
 import { Cartatom } from "../Atoms";
 import { Cartcard } from "@/components/Cartcard";
 
-export default function Cart() {
+export default function () {
     const [cartProducts, setCart] = useRecoilState(Cartatom);
     const cost = cartProducts.map((prod) => prod.price).reduce((acc, price) => acc + price, 0);
     const totalPrice = cost - 100 + 60;
