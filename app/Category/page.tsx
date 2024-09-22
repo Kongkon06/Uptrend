@@ -2,7 +2,7 @@
 
 import CategoryCard from '@/components/CategoryCard';
 import { Tagline } from '@/components/Tagline';
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useMemo } from 'react';
 import { Slider } from '@/components/ui/slider';
 import { Checkbox } from '@/components/ui/checkbox';
 import {

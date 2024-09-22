@@ -5,12 +5,14 @@ import { initialProducts } from "@/app/asset";
 import { useRecoilState } from "recoil";
 import { Cartatom } from "@/app/Atoms";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
 export default function ({ params }: { params: { id: string } }){
     const product = initialProducts
     const id= params.id;
     const [productlist,setproduct] = useRecoilState(Cartatom);
     const index= Number(id)-1;
+    const [quantity,setquantity] = useState(1);
     return<div >
     <Appbar />
     <div className="h-100% flex font-dm-sans ">
@@ -44,17 +46,17 @@ export default function ({ params }: { params: { id: string } }){
                 <div className="mt-7 text-2xl ">
                     <div>Select Size</div>
                     <div className="mt-2 flex">
-                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700 onfocus:border-slate-700">S</div>
-                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700">M</div>
-                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700">L</div>
-                        <div role="button" className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700">XL</div></div>
+                    <button className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700 focus:ring-2 focus:outline-none focus:ring-slate-700 dark:focus:slate-700">S</button>
+                        <button className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700 focus:ring-2 focus:outline-none focus:ring-slate-700 dark:focus:slate-700">M</button>
+                        <button className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700 focus:ring-2 focus:outline-none focus:ring-slate-700 dark:focus:slate-700">L</button>
+                        <button className="px-4 border-2 border-white mr-2 bg-slate-200 hover:border-slate-700 focus:ring-2 focus:outline-none focus:ring-slate-700 dark:focus:slate-700">XL</button></div>
                 </div>
                 <div className="mt-7 text-2xl ">
                     <div>Quantity</div>
                     <div className="mt-2 w-20 flex justify-between items-center border-black border-y-2">
-                        <div className=" h-6 w-6 flex items-center ">+</div>
-                        <div>1</div>
-                        <div className=" h-6 w-6 pl-2 flex items-center ">-</div>
+                        <div role="button" onClick={()=>setquantity(quantity+1)} className=" h-6 w-6 flex items-center ">+</div>
+                        <div>{quantity}</div>
+                        <div role="button" onClick={()=>{if(quantity>=1)setquantity(quantity+1)}} className=" h-6 w-6 pl-2 flex items-center ">-</div>
                     </div>
                 </div>
                 <div className="mt-7 text-2xl ">
@@ -102,7 +104,7 @@ export default function ({ params }: { params: { id: string } }){
  
         
     </div>
-    <div className="h-full p-8">
+    <div className="h-full flex justify-center p-8">
 <Footer/>
 </div>
 </div>

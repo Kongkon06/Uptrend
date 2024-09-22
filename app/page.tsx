@@ -1,6 +1,6 @@
 'use client';
 
-import React, {useState} from 'react';
+import React from 'react';
 
 import { Appbar } from "@/components/Appbar";
 import { Card } from "@/components/Card";
@@ -13,11 +13,7 @@ const dm_sans = DM_Sans({
   weight:'400'
 });
 export default function Home() {
-  const [isloggedin, setIsLoggedIn] = useState<boolean>(false); //changes
   const product = initialProducts;
-  const logger = (isloggedin: boolean) => {       //changes
-    setIsLoggedIn(isloggedin);
-  }
   return (
     <div className={dm_sans.className}>
       <Appbar />

@@ -108,5 +108,13 @@ export const initialProducts = [
     image: "https://overlaysnow.com/cdn/shop/files/1_5d7b18fe-bc7c-42db-b19e-42531c7e6fbe.png",
     description: "Featuring a unique street lovers STAR NASA Thick Aviator Jacket design with cotton fabrication, which makes it stylish and comfortable.",
     brand: "Overlays",
+  },{
+    id:14,
+    name: "Mythical Embroidery Crane Birds Fruits Retro Jacket",
+    category: "Clothing",
+    price: 2599.0,
+    image: "https://sukajanshop.com/wp-content/uploads/2022/11/31671332-1-510x510.jpg?v=1669564760",
+    description: "Featuring a unique street lovers STAR NASA Thick Aviator Jacket design with cotton fabrication, which makes it stylish and comfortable.",
+    brand: "Sukajan",
   }
 ];

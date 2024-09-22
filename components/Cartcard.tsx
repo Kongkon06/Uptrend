@@ -1,9 +1,9 @@
 'use client'
 export function Cartcard({ product, fn }: { product: any, fn: () => void }) {
     return <div className="flex justify-between">
-        <div className="flex"><div className="w-32"><img src={product.image} className="w-full h-full object-contain" alt=""></img></div>
+        <div className="flex"><div className="w-32"><img src={product.image} className="w-full h-full object-cover" alt=""></img></div>
             <div className="ml-3">
-                <div className="text-lg text-green-700">{product.price}</div>
+                <div className="text-lg font-semibold text-green-500">{product.price}</div>
                 <div className="text-lg">{product.name}</div>
                 <div className="text-lg">{product.description.slice(0, 25)}...</div>
             </div></div>
