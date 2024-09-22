@@ -4,6 +4,7 @@ import { Suggestion } from "@/components/Similiar";
 import { initialProducts } from "@/app/asset"; 
 import { useRecoilState } from "recoil";
 import { Cartatom } from "@/app/Atoms";
+import Footer from "@/components/Footer";
 
 export default function ({ params }: { params: { id: string } }){
     const product = initialProducts
@@ -90,8 +91,19 @@ export default function ({ params }: { params: { id: string } }){
                     </div>
             </div>
         </div>
-        <Suggestion/></div>
+        <div className="text">
+            <p className="font-bold text-3xl text-center mt-20 ">You may also like</p>
+        </div>
+        <div className="mt-12">
+        <Suggestion/>
+        </div>
+        </div>
+
+ 
         
     </div>
+    <div className="h-full p-8">
+<Footer/>
+</div>
 </div>
 }

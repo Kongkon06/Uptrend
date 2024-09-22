@@ -1,24 +1,24 @@
 export function Suggestion(){
-    return  <div className="h-96 p-3 grid grid-cols-3 grid-rows-1 gap-1">
+    return  <div className="h-full p-3 flex  gap-20 ml-52">
     <div className="max-w-sm rounded overflow-hidden shadow-lg ">
-    <img src="https://littleboxindia.com/cdn/shop/files/3630298a04befd59af2352a8947691c2_460x.jpg?v=1723903274" alt="Description of the image" className="object-cover w-full h-72" />
+    <img src="https://i.pinimg.com/564x/88/68/5f/88685ff42bc232465447b4411eb913b7.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
-        <div className="font-medium text-lg mb-2">Cowl Neck Solid Ruffle Hem Ruched Maxi Dress In Pink</div>
+        <div className="font-medium text-lg mb-2">STAR NASA Thick Aviator Jacket</div>
+        <p className="text-gray-700 text-base">Rs 1299</p>
+    </div>
+    </div>
+    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
+    <img src="https://i.pinimg.com/564x/ed/96/d5/ed96d59392b19254a158d3b659f44372.jpg" alt="Description of the image" className="object-cover w-full h-72" />
+    <div className="px-6 py-4">
+        <div className="font-medium text-lg mb-2">Autumn Embroidered Jacket Dragon Sukajan Jacket</div>
         <p className="text-gray-700 text-base">Rs 1099</p>
     </div>
     </div>
     <div className="max-w-sm rounded overflow-hidden shadow-lg ">
-    <img src="https://littleboxindia.com/cdn/shop/files/367c477d4d62e1cb56412edeb6fe887b_460x.jpg?v=1718453316" alt="Description of the image" className="object-cover w-full h-72" />
+    <img src="https://overlaysnow.com/cdn/shop/files/Overlays-Edit-_1.jpg" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
-        <div className="font-medium text-lg mb-2">V Neck Front Knot Floral Print Flare Long Sleeve Top</div>
-        <p className="text-gray-700 text-base">Rs 799</p>
-    </div>
-    </div>
-    <div className="max-w-sm rounded overflow-hidden shadow-lg ">
-    <img src="https://littleboxindia.com/cdn/shop/files/f1d4802c9c39391020211dc1fb328304_460x.jpg?v=1719493846" alt="Description of the image" className="object-cover w-full h-72" />
-    <div className="px-6 py-4">
-        <div className="font-medium text-lg mb-2">Tie Shoulder Layered Ruched Cami Dress In Pink</div>
-        <p className="text-gray-700 text-base">Rs 899</p>
+        <div className="font-medium text-lg mb-2">Panther Distressed Fade Heavy Weight Oversized T-Shirt</div>
+        <p className="text-gray-700 text-base">Rs 1999</p>
     </div>
     </div>
 </div> 
