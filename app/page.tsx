@@ -50,7 +50,10 @@ export default function Home() {
      <div className="row-span-1"><Card product={product[10].image}/></div>
     </div>
 
-  
+    <div className='h-16 mt-20 text-balance'>
+  <p className='font-serif  font-light text-center justify-center'>"Created these clothes for those people who are here to conquer. If this were a 1,000 years ago, we made these for the men who would come on horses and burn armies alone. In today's world, they change, work and push limits to become Extarordinary."
+</p>
+</div>
 
     <div className="my-2 h-full p-3 grid grid-cols-4 gap-2">
   <div className="h-20 col-span-4 flex justify-center items-center text-3xl font-semibold font-dm-sans">BestSellers</div>
@@ -66,10 +69,10 @@ export default function Home() {
   </div>
   
   <div className="w-full max-w-sm rounded overflow-hidden shadow-lg flex flex-col items-center">
-    <img src="https://i.pinimg.com/564x/ed/96/d5/ed96d59392b19254a158d3b659f44372.jpg" alt="Description of the image" className="object-cover w-full h-72" />
+    <img src="https://sukajanshop.com/wp-content/uploads/2022/11/31671332-1-510x510.jpg?v=1669564760" alt="Description of the image" className="object-cover w-full h-72" />
     <div className="px-6 py-4">
-      <div className="font-medium text-lg mb-2">Autumn Embroidered Jacket Dragon Sukajan Jacket</div>
-      <p className="text-gray-700 text-base">Rs 1099</p>
+      <div className="font-medium text-lg mb-2">Mythical Embroidery Crane Birds Fruits Retro Jacket</div>
+      <p className="text-gray-700 text-base">Rs 2599</p>
     </div>
   </div>
   
@@ -90,17 +93,14 @@ export default function Home() {
   </div>
 </div>
 
-<div className='h-16 mt-20 text-balance'>
-  <p className='font-serif  font-light text-center justify-center'>"Created these clothes for those people who are here to conquer. If this were a 1,000 years ago, we made these for the men who would come on horses and burn armies alone. In today's world, they change, work and push limits to become Extarordinary."
-</p>
-</div>
+
 
     <div> 
     <div className='flex mt-28 gap-1'><img src='https://img.freepik.com/premium-vector/new-collection-sale-banner-design_105164-276.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid' className='w-2/3'></img><img src='https://img.freepik.com/premium-photo/fashion-sales-template-design_639785-87243.jpg?ga=GA1.1.1733476315.1719984428&semt=ais_hybrid'></img></div>
     </div>
 
     <div className='flex justify-center'>
-    <div className='container h-full mt-32 '>
+    <div className='container h-full mt-28 '>
 <h2 className='font-extrabold text-5xl text-center'>Why Shop with Uptrend ?</h2>
 <div className='flex justify-center'>
 <ul className='list w-4/5 flex justify-between mt-28 '>
@@ -155,6 +155,7 @@ export default function Home() {
 
 <div className="h-full flex justify-center p-8">
 <Footer/>
+<a href='#Appbar' className='back-top-btn active' aria-label='back to top' data-back-top-btn='true'></a>
 </div>
   </div>
   );
