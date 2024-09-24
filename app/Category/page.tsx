@@ -30,7 +30,7 @@ export type ProductProps = {
 };
 
 export default function Category() {
-  const products= initialProducts; // Explicit type
+  const products = initialProducts; // Explicit type
   const [categories, setCategories] = useState<string[]>([]);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 200]);
   const [sortBy, setSortBy] = useState<string>('name');
@@ -148,9 +148,7 @@ export default function Category() {
               <div role='button'key={product.id}>
                 <Link href={`/Product/${product.id}`}> <CategoryCard product={product} /></Link>
               </div>
-           
             ))}
-               
           </div>
         </div>
       </div>

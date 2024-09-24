@@ -28,7 +28,7 @@ const Footer: React.FC = () => {
           </form>
         </div>
       </div>
-      <div className=" mx-auto text-center mt-56">
+      <div className=" mx-auto text-center mt-52">
         <p>© 2024 UPTREND. All rights reserved.</p>
         <p className="mt-2">
           Made with{' '}
@@ -37,7 +37,9 @@ const Footer: React.FC = () => {
           </span>{' '}
           using Next.js and Tailwind CSS
         </p>
+        
       </div>
+      
     </footer>
   );
 };
