@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
           <li><p className='list-title font-bold text-xl'>About us</p></li>
           <li><p className='list-text my-2'>Discover our latest collections and fashion trends.</p></li>
           <li><p className='list-text font-bold mt-4'>+91-8453444981</p></li>
-          <li><p className='list-text font-bold'>support@hoodie.com</p></li>
+          <li><p className='list-text font-bold'>support@Uptrend.com</p></li>
         </ul>
         <ul className='list ml-48'>
           <li><p className='list-title font-bold text-xl '>CustomerService</p></li>
